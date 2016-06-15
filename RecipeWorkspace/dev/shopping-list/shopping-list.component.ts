@@ -8,7 +8,7 @@ import {ShoppingListService} from "../shared/shopping-list.service";
         <h1>Shopping List</h1>
         <div><my-shopping-list-edit [ingredient]="selectedItem"></my-shopping-list-edit></div>
         <div class="list">
-            <button class="btn">Add new Item</button>
+            <button class="btn" (click)="onAddItem()">Add new Item</button>
             <ul>
                 <li *ngFor="#item of shoppingList" (click)="onSelectItem(item)">{{item.name}} {{item.amount}}</li>
             </ul>
@@ -28,6 +28,10 @@ export class ShoppingListComponent implements OnInit{
 
     ngOnInit():any {
         this.shoppingList = this._shoppingListService.getAllItems();
+    }
+
+    onAddItem(){
+        this.selectedItem = null;
     }
 
     onSelectItem(item: Ingredient) {
