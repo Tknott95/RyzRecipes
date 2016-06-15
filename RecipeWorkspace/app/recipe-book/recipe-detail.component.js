@@ -21,6 +21,9 @@ System.register(["angular2/core"], function(exports_1, context_1) {
             RecipeDetailComponent = (function () {
                 function RecipeDetailComponent() {
                 }
+                RecipeDetailComponent.prototype.ngOnInit = function () {
+                    return null;
+                };
                 RecipeDetailComponent = __decorate([
                     core_1.Component({
                         templateUrl: 'templates/recipes/recipe-detail.tpl.html'
@@ -34,4 +37,4 @@ System.register(["angular2/core"], function(exports_1, context_1) {
     }
 });
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlY2lwZS1ib29rL3JlY2lwZS1kZXRhaWwuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1lBUUE7Z0JBQUE7Z0JBRUEsQ0FBQztnQkFQRDtvQkFBQyxnQkFBUyxDQUFDO3dCQUNQLFdBQVcsRUFBRSwwQ0FBMEM7cUJBRTFELENBQUM7O3lDQUFBO2dCQUlGLDRCQUFDO1lBQUQsQ0FGQSxBQUVDLElBQUE7WUFGRCx5REFFQyxDQUFBIiwiZmlsZSI6InJlY2lwZS1ib29rL3JlY2lwZS1kZXRhaWwuY29tcG9uZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsiXG5pbXBvcnQge0NvbXBvbmVudH0gZnJvbSBcImFuZ3VsYXIyL2NvcmVcIjtcblxuQENvbXBvbmVudCh7XG4gICAgdGVtcGxhdGVVcmw6ICd0ZW1wbGF0ZXMvcmVjaXBlcy9yZWNpcGUtZGV0YWlsLnRwbC5odG1sJ1xuXG59KVxuXG5leHBvcnQgY2xhc3MgUmVjaXBlRGV0YWlsQ29tcG9uZW50IHtcblxufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlY2lwZS1ib29rL3JlY2lwZS1kZXRhaWwuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1lBU0E7Z0JBQUE7Z0JBT0EsQ0FBQztnQkFITyx3Q0FBUSxHQUFSO29CQUNJLE1BQU0sQ0FBQyxJQUFJLENBQUM7Z0JBQ2hCLENBQUM7Z0JBWFQ7b0JBQUMsZ0JBQVMsQ0FBQzt3QkFDUCxXQUFXLEVBQUUsMENBQTBDO3FCQUUxRCxDQUFDOzt5Q0FBQTtnQkFTRiw0QkFBQztZQUFELENBUEEsQUFPQyxJQUFBO1lBUEQseURBT0MsQ0FBQSIsImZpbGUiOiJyZWNpcGUtYm9vay9yZWNpcGUtZGV0YWlsLmNvbXBvbmVudC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0IHtDb21wb25lbnQsIE9uSW5pdH0gZnJvbSBcImFuZ3VsYXIyL2NvcmVcIjtcbmltcG9ydCB7UmVjaXBlfSBmcm9tIFwiLi4vc2hhcmVkL3JlY2lwZVwiO1xuXG5AQ29tcG9uZW50KHtcbiAgICB0ZW1wbGF0ZVVybDogJ3RlbXBsYXRlcy9yZWNpcGVzL3JlY2lwZS1kZXRhaWwudHBsLmh0bWwnXG5cbn0pXG5cbmV4cG9ydCBjbGFzcyBSZWNpcGVEZXRhaWxDb21wb25lbnQgaW1wbGVtZW50cyBPbkluaXQge1xuXG4gICAgICAgIHJlY2lwZTogUmVjaXBlO1xuXG4gICAgICAgIG5nT25Jbml0KCk6YW55IHtcbiAgICAgICAgICAgIHJldHVybiBudWxsO1xuICAgICAgICB9XG59Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
