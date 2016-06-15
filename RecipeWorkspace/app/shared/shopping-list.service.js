@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', "../mock/shopping-list"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,30 +10,40 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, shopping_list_1;
     var ShoppingListService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (shopping_list_1_1) {
+                shopping_list_1 = shopping_list_1_1;
             }],
         execute: function() {
             ShoppingListService = (function () {
                 function ShoppingListService() {
                 }
                 ShoppingListService.prototype.getAllItems = function () {
+                    return shopping_list_1.SHOPPING_LIST;
                 };
                 ShoppingListService.prototype.getItem = function (index) {
+                    return shopping_list_1.SHOPPING_LIST[index];
                 };
                 ShoppingListService.prototype.getIndexOfItem = function (item) {
+                    return shopping_list_1.SHOPPING_LIST.indexOf(item);
                 };
                 ShoppingListService.prototype.insertItem = function (item) {
+                    shopping_list_1.SHOPPING_LIST.push(item);
                 };
                 ShoppingListService.prototype.insertItems = function (items) {
+                    Array.prototype.push.apply(shopping_list_1.SHOPPING_LIST, items);
                 };
                 ShoppingListService.prototype.deleteItem = function (item) {
+                    shopping_list_1.SHOPPING_LIST.splice(shopping_list_1.SHOPPING_LIST.indexOf(item), 1);
                 };
                 ShoppingListService.prototype.updateItem = function (index, item) {
+                    shopping_list_1.SHOPPING_LIST[index] = item;
                 };
                 ShoppingListService = __decorate([
                     core_1.Injectable(), 
@@ -46,4 +56,4 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     }
 });
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNoYXJlZC9zaG9wcGluZy1saXN0LnNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7WUFJQTtnQkFBQTtnQkE2QkEsQ0FBQztnQkEzQkcseUNBQVcsR0FBWDtnQkFFQSxDQUFDO2dCQUVELHFDQUFPLEdBQVAsVUFBUSxLQUFhO2dCQUVyQixDQUFDO2dCQUVELDRDQUFjLEdBQWQsVUFBZSxJQUFnQjtnQkFFL0IsQ0FBQztnQkFFRCx3Q0FBVSxHQUFWLFVBQVcsSUFBZ0I7Z0JBRTNCLENBQUM7Z0JBRUQseUNBQVcsR0FBWCxVQUFZLEtBQW1CO2dCQUUvQixDQUFDO2dCQUVELHdDQUFVLEdBQVYsVUFBVyxJQUFnQjtnQkFFM0IsQ0FBQztnQkFFRCx3Q0FBVSxHQUFWLFVBQVcsS0FBYSxFQUFFLElBQWdCO2dCQUUxQyxDQUFDO2dCQTdCTDtvQkFBQyxpQkFBVSxFQUFFOzt1Q0FBQTtnQkE4QmIsMEJBQUM7WUFBRCxDQTdCQSxBQTZCQyxJQUFBO1lBN0JELHFEQTZCQyxDQUFBIiwiZmlsZSI6InNoYXJlZC9zaG9wcGluZy1saXN0LnNlcnZpY2UuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0luamVjdGFibGV9IGZyb20gJ2FuZ3VsYXIyL2NvcmUnO1xuaW1wb3J0IHtJbmdyZWRpZW50fSBmcm9tIFwiLi9pbmdyZWRpZW50XCI7XG5cbkBJbmplY3RhYmxlKClcbmV4cG9ydCBjbGFzcyBTaG9wcGluZ0xpc3RTZXJ2aWNlIHtcblxuICAgIGdldEFsbEl0ZW1zICgpIHtcblxuICAgIH1cblxuICAgIGdldEl0ZW0oaW5kZXg6IG51bWJlcikge1xuXG4gICAgfVxuXG4gICAgZ2V0SW5kZXhPZkl0ZW0oaXRlbTogSW5ncmVkaWVudCkge1xuXG4gICAgfVxuXG4gICAgaW5zZXJ0SXRlbShpdGVtOiBJbmdyZWRpZW50KSB7XG5cbiAgICB9XG5cbiAgICBpbnNlcnRJdGVtcyhpdGVtczogSW5ncmVkaWVudFtdKSB7XG5cbiAgICB9XG5cbiAgICBkZWxldGVJdGVtKGl0ZW06IEluZ3JlZGllbnQpIHtcblxuICAgIH1cblxuICAgIHVwZGF0ZUl0ZW0oaW5kZXg6IG51bWJlciwgaXRlbTogSW5ncmVkaWVudCkge1xuXG4gICAgfVxufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNoYXJlZC9zaG9wcGluZy1saXN0LnNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7WUFLQTtnQkFBQTtnQkE2QkEsQ0FBQztnQkEzQkcseUNBQVcsR0FBWDtvQkFDSSxNQUFNLENBQUMsNkJBQWEsQ0FBQztnQkFDekIsQ0FBQztnQkFFRCxxQ0FBTyxHQUFQLFVBQVEsS0FBYTtvQkFDakIsTUFBTSxDQUFDLDZCQUFhLENBQUMsS0FBSyxDQUFDLENBQUM7Z0JBQ2hDLENBQUM7Z0JBRUQsNENBQWMsR0FBZCxVQUFlLElBQWdCO29CQUMzQixNQUFNLENBQUMsNkJBQWEsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7Z0JBQ3ZDLENBQUM7Z0JBRUQsd0NBQVUsR0FBVixVQUFXLElBQWdCO29CQUN2Qiw2QkFBYSxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQztnQkFDN0IsQ0FBQztnQkFFRCx5Q0FBVyxHQUFYLFVBQVksS0FBbUI7b0JBQzNCLEtBQUssQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyw2QkFBYSxFQUFFLEtBQUssQ0FBQyxDQUFDO2dCQUNyRCxDQUFDO2dCQUVELHdDQUFVLEdBQVYsVUFBVyxJQUFnQjtvQkFDdkIsNkJBQWEsQ0FBQyxNQUFNLENBQUMsNkJBQWEsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDLENBQUM7Z0JBQ3pELENBQUM7Z0JBRUQsd0NBQVUsR0FBVixVQUFXLEtBQWEsRUFBRSxJQUFnQjtvQkFDdEMsNkJBQWEsQ0FBQyxLQUFLLENBQUMsR0FBRyxJQUFJLENBQUM7Z0JBQ2hDLENBQUM7Z0JBN0JMO29CQUFDLGlCQUFVLEVBQUU7O3VDQUFBO2dCQThCYiwwQkFBQztZQUFELENBN0JBLEFBNkJDLElBQUE7WUE3QkQscURBNkJDLENBQUEiLCJmaWxlIjoic2hhcmVkL3Nob3BwaW5nLWxpc3Quc2VydmljZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7SW5qZWN0YWJsZX0gZnJvbSAnYW5ndWxhcjIvY29yZSc7XG5pbXBvcnQge0luZ3JlZGllbnR9IGZyb20gXCIuL2luZ3JlZGllbnRcIjtcbmltcG9ydCB7U0hPUFBJTkdfTElTVH0gZnJvbSBcIi4uL21vY2svc2hvcHBpbmctbGlzdFwiO1xuXG5ASW5qZWN0YWJsZSgpXG5leHBvcnQgY2xhc3MgU2hvcHBpbmdMaXN0U2VydmljZSB7XG5cbiAgICBnZXRBbGxJdGVtcygpIHtcbiAgICAgICAgcmV0dXJuIFNIT1BQSU5HX0xJU1Q7XG4gICAgfVxuXG4gICAgZ2V0SXRlbShpbmRleDogbnVtYmVyKSB7XG4gICAgICAgIHJldHVybiBTSE9QUElOR19MSVNUW2luZGV4XTtcbiAgICB9XG5cbiAgICBnZXRJbmRleE9mSXRlbShpdGVtOiBJbmdyZWRpZW50KSB7XG4gICAgICAgIHJldHVybiBTSE9QUElOR19MSVNULmluZGV4T2YoaXRlbSk7XG4gICAgfVxuXG4gICAgaW5zZXJ0SXRlbShpdGVtOiBJbmdyZWRpZW50KSB7XG4gICAgICAgIFNIT1BQSU5HX0xJU1QucHVzaChpdGVtKTtcbiAgICB9XG5cbiAgICBpbnNlcnRJdGVtcyhpdGVtczogSW5ncmVkaWVudFtdKSB7XG4gICAgICAgIEFycmF5LnByb3RvdHlwZS5wdXNoLmFwcGx5KFNIT1BQSU5HX0xJU1QsIGl0ZW1zKTtcbiAgICB9XG5cbiAgICBkZWxldGVJdGVtKGl0ZW06IEluZ3JlZGllbnQpIHtcbiAgICAgICAgU0hPUFBJTkdfTElTVC5zcGxpY2UoU0hPUFBJTkdfTElTVC5pbmRleE9mKGl0ZW0pLCAxKTtcbiAgICB9XG5cbiAgICB1cGRhdGVJdGVtKGluZGV4OiBudW1iZXIsIGl0ZW06IEluZ3JlZGllbnQpIHtcbiAgICAgICAgU0hPUFBJTkdfTElTVFtpbmRleF0gPSBpdGVtO1xuICAgIH1cbn0iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
