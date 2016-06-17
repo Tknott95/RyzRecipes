@@ -1,6 +1,8 @@
 import {Component} from 'angular2/core';
 import {RecipeListComponent} from "./recipe-list.component";
 import {RecipeService} from "./recipe.service";
+import {RouteConfig, ROUTER_DIRECTIVES} from "angular2/router";
+import {RecipeDetailComponent} from "./recipe-detail.component";
 
 @Component({
     selector: 'my-recipes',
@@ -9,7 +11,7 @@ import {RecipeService} from "./recipe.service";
             <my-recipe-list></my-recipe-list>
         </div>
         <div class="detail">
-            Recipe Detail
+            <router-outlet></router-outlet>
         </div>
 
 
@@ -17,8 +19,13 @@ import {RecipeService} from "./recipe.service";
 
      `,
     providers: [RecipeService],
-    directives: [RecipeListComponent]
+    directives: [RecipeListComponent, ROUTER_DIRECTIVES]
 })
+
+@RouteConfig([
+    {path: '/...', name: 'RecipeDetail', component: RecipeDetailComponent, useAsDefault: true},
+    {path: '/editMode', name: 'RecipeEdit', component: RecipeDetailComponent} //must change
+])
 
 export class RecipesComponent {
 

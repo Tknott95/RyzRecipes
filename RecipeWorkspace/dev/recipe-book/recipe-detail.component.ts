@@ -1,6 +1,7 @@
 
 import {Component, OnInit} from "angular2/core";
 import {Recipe} from "../shared/recipe";
+import {RouteParams} from "angular2/router";
 
 @Component({
     templateUrl: 'templates/recipes/recipe-detail.tpl.html'
@@ -10,8 +11,11 @@ import {Recipe} from "../shared/recipe";
 export class RecipeDetailComponent implements OnInit {
 
         recipe: Recipe;
+        private _recipe
+
+    constructor(private _routeParams: RouteParams) {}
 
         ngOnInit():any {
-            return null;
+            let itemIndex = this._routeParams.get('recipeIndex');
         }
 }
